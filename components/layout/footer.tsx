@@ -1,4 +1,19 @@
+'use client'
+import { useEffect, useState } from "react";
+
 export default function Footer() {
+  const [showButton, setShowButton] = useState(false);
+
+  // Affiche le bouton de retour en haut après un défilement de 300px
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <footer className="bg-gray-900 text-white py-10">
       <div className="max-w-screen-xl mx-auto px-4">
@@ -7,9 +22,7 @@ export default function Footer() {
           <div className="w-full md:w-1/4 mb-6">
             <h3 className="text-lg font-semibold mb-4">About Us</h3>
             <p className="text-sm">
-              Découvrez le luxe dans notre hôtel, où le confort rencontre l
-              élégance. Réservez votre séjour dès aujourd hui et profitez du
-              meilleur service de l industrie.
+              Découvrez le luxe dans notre hôtel, où le confort rencontre l'élégance. Réservez votre séjour dès aujourd'hui et profitez du meilleur service de l'industrie.
             </p>
           </div>
 
@@ -18,7 +31,9 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/">Accueil</a>
+                <a href="/" className="hover:text-yellow-500">
+                  Accueil
+                </a>
               </li>
               <li>
                 <a href="/chambres" className="hover:text-yellow-500">
@@ -60,10 +75,16 @@ export default function Footer() {
           &copy; 2024 Resa Hotel | All Rights Reserved
         </div>
       </div>
+
       {/* Scroll to Top Button */}
-      <button className="fixed bottom-10 right-10 bg-yellow-500 text-white py-2 px-4 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300">
-        &#9650;
-      </button>
+      {showButton && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-10 right-10 bg-yellow-500 text-white py-2 px-4 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300"
+        >
+          &#9650;
+        </button>
+      )}
     </footer>
   );
 }

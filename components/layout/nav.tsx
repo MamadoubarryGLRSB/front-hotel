@@ -6,9 +6,9 @@ const Nav: React.FC = () => {
       <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <a href="" className="hover:text-yellow-500">
+          <Link href="/" className="hover:text-yellow-500">
             ResaHotel
-          </a>
+          </Link>
         </div>
 
         {/* Navigation Links */}
@@ -18,21 +18,16 @@ const Nav: React.FC = () => {
               Accueil
             </Link>
           </li>
-          <Link href="/chambres" className="hover:text-yellow-500">
-            Chambre
-          </Link>
-
-          {/* <li>
-            <a href="/restaurant" className="hover:text-yellow-500">
-              Restaurant
-            </a>
-          </li> */}
+          <li>
+            <Link href="/chambres" className="hover:text-yellow-500">
+              Chambres
+            </Link>
+          </li>
           <li>
             <Link href="/restaurant" className="hover:text-yellow-500">
               Restaurant
             </Link>
           </li>
-
           <li>
             <Link href="/reservation" className="hover:text-yellow-500">
               Réservation
