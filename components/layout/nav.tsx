@@ -6,35 +6,32 @@ export default function Nav() {
       <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <a href="" className="hover:text-yellow-500">
+          <Link href="/" className="hover:text-yellow-500">
             ResaHotel
-          </a>
+          </Link>
         </div>
 
         {/* Navigation Links */}
         <ul className="flex space-x-6">
           <li>
-            <a href="" className="hover:text-yellow-500">
+            <Link href="/" className="hover:text-yellow-500">
               Accueil
-            </a>
+            </Link>
           </li>
-          <Link href={'/chambres'}>
-            <li>
-              
-                Chambres
-            
-            </li>
-          </Link>
-
           <li>
-            <a href="/reservation" className="hover:text-yellow-500">
+            <Link href="/chambres" className="hover:text-yellow-500">
+              Chambres
+            </Link>
+          </li>
+          <li>
+            <Link href="/reservation" className="hover:text-yellow-500">
               Réservation
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/contact" className="hover:text-yellow-500">
+            <Link href="/contact" className="hover:text-yellow-500">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
