@@ -1,5 +1,11 @@
-'use client'
-import { useEffect, useState } from "react";
+'use client';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from 'react-icons/fa';
+import { useEffect, useState } from 'react';
 
 export default function Footer() {
   const [showButton, setShowButton] = useState(false);
@@ -19,10 +25,12 @@ export default function Footer() {
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="flex flex-wrap justify-between">
           {/* About Us Section */}
-          <div className="w-full md:w-1/4 mb-6">
+          <div className="w-full md:w-1/4">
             <h3 className="text-lg font-semibold mb-4">About Us</h3>
-            <p className="text-sm">
-              Découvrez le luxe dans notre hôtel, où le confort rencontre l'élégance. Réservez votre séjour dès aujourd'hui et profitez du meilleur service de l'industrie.
+            <p className="text-gray-400 transition-colors duration-200">
+              Découvrez le luxe dans notre hôtel, où le confort rencontre
+              l'élégance. Réservez votre séjour dès aujourd'hui et profitez du
+              meilleur service de l'industrie.
             </p>
           </div>
 
@@ -31,27 +39,42 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/" className="hover:text-yellow-500">
+                <a
+                  href="/"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+                >
                   Accueil
                 </a>
               </li>
               <li>
-                <a href="/chambres" className="hover:text-yellow-500">
+                <a
+                  href="/chambres"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+                >
                   Chambre
                 </a>
               </li>
               <li>
-                <a href="/restaurant" className="hover:text-yellow-500">
+                <a
+                  href="/restaurant"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+                >
                   Restaurant
                 </a>
               </li>
               <li>
-                <a href="/reservation" className="hover:text-yellow-500">
+                <a
+                  href="/reservation"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+                >
                   Réservation
                 </a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-yellow-500">
+                <a
+                  href="/contact"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+                >
                   Contact
                 </a>
               </li>
@@ -59,14 +82,85 @@ export default function Footer() {
           </div>
 
           {/* Contact Section */}
-          <div className="w-full md:w-1/4 mb-6">
+          <div className="w-full lg:w-1/4">
             <h3 className="text-lg font-semibold mb-4">Contactez-nous</h3>
             <ul className="space-y-2 text-sm">
-              <li>360 Rue Real, 69000 Lyon</li>
-              <li>30 Rue Marceau, 38000 Grenoble</li>
-              <li>+33 012456789</li>
-              <li>info@resahotel.com</li>
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/360+Rue+Real,+69000+Lyon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+                >
+                  360 Rue Real, 69000 Lyon
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/30+Rue+Marceau,+38000+Grenoble"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+                >
+                  30 Rue Marceau, 38000 Grenoble
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+33 01 23 45 67 89"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+                >
+                  +33 01 23 45 67 89
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:info@resahotel.com"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+                >
+                  info@resahotel.com
+                </a>
+              </li>
             </ul>
+          </div>
+
+          {/* Social Media Icons */}
+          <div className="w-full lg:w-1/4">
+            <h3 className="text-lg font-semibold mb-4">Suivre Nous</h3>
+            <div className="flex space-x-4 text-2xl">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-yellow-500 transition-colors duration-200"
+              >
+                <FaTwitter />
+              </a>
+            </div>
           </div>
 
           {/* Footer Bottom */}
