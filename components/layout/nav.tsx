@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-export default function Nav() {
+const Nav: React.FC = () => {
   return (
     <nav className="bg-gray-800 text-white py-4">
       <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center">
@@ -24,6 +24,11 @@ export default function Nav() {
             </Link>
           </li>
           <li>
+            <Link href="/restaurant" className="hover:text-yellow-500">
+              Restaurant
+            </Link>
+          </li>
+          <li>
             <Link href="/reservation" className="hover:text-yellow-500">
               Réservation
             </Link>
@@ -37,4 +42,6 @@ export default function Nav() {
       </div>
     </nav>
   );
-}
+};
+
+export default Nav;
