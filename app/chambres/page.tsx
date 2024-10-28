@@ -2,7 +2,7 @@ import RoomsWrapper from "@/components/chambres/rooms-wrapper";
 
 export async function getRooms() {
     try {
-      const res = await fetch(`${process.env.REACT_BASE_API_URL_PRISMA}/chambres`, { next: { tags: ['chambres'] } });
+      const res = await fetch(`${process.env.REACT_BASE_API_URL_PRISMA}/chambre`, { next: { tags: ['chambres'] } });
   
       console.log('Response:', res); 
     
